@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: auto; /* Ensure height adjusts dynamically */
+            height: 100%; /* Ensure body takes up full height */
             font-family: 'Arial', sans-serif;
             box-sizing: border-box;
         }
@@ -24,6 +24,8 @@
             font-family: 'Arial', sans-serif;
             width: 100%;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Flex container styling for the footer inner content */
@@ -37,6 +39,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            overflow: hidden; /* Ensure no overflow */
         }
 
         /* Footer items - each section's content */
@@ -108,12 +111,6 @@
         hr {
             border-top: 1px solid #ffffff;
             margin: 20px 0;
-        }
-
-        /* Ensure no extra space at the bottom */
-        .footer-container {
-            display: flex;
-            flex-direction: column;
         }
 
         /* Mobile-specific styles - splitting the content into two columns */
