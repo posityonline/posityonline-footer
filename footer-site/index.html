@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%; /* Ensure height takes up full available space */
+            height: auto; /* Ensure height adjusts dynamically */
             font-family: 'Arial', sans-serif;
             box-sizing: border-box;
         }
@@ -194,5 +194,17 @@
             <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
         </div>
     </div>
+
+    <script>
+        // Function to send the height to the parent window (Kajabi)
+        function sendHeight() {
+            var height = document.body.scrollHeight;
+            window.parent.postMessage({ type: 'resize', height: height }, '*');
+        }
+
+        // Trigger the function when content loads or is resized
+        window.onload = sendHeight;
+        window.onresize = sendHeight;
+    </script>
 </body>
 </html>
