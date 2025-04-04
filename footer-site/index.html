@@ -223,6 +223,14 @@
         // Resize on load and on window resize
         window.addEventListener('load', resizeIframe);
         window.addEventListener('resize', resizeIframe);
+
+        function sendHeightToParent() {
+            const height = document.documentElement.scrollHeight;
+            parent.postMessage({ type: 'footerHeight', height: height }, '*');
+        }
+
+    window.addEventListener('load', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
     </script>
 </body>
 </html>
