@@ -23,6 +23,8 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             width: 100%;
+            max-width: 1200px; /* Set max-width for a small section on large screens */
+            margin: 0 auto; /* Center the footer on the page */
             box-sizing: border-box;
         }
 
@@ -32,7 +34,7 @@
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;  /* Ensure items wrap when space is tight */
-            gap: 30px;
+            gap: 20px; /* Adjusted gap for better spacing */
             width: 100%;
             padding: 0;
             margin: 0;
@@ -42,7 +44,7 @@
         /* Footer items - each section's content */
         .footer-item, .footer-item-small {
             flex: 1;
-            min-width: 200px;  /* Adjust this as needed to give enough space */
+            min-width: 220px;  /* Set a minimum width for footer items */
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -146,6 +148,7 @@
 <body>
     <div class="footer-container">
         <div class="footer-inner">
+            <!-- First Footer Item: Posity Online Details -->
             <div class="footer-item">
                 <div style="display: flex; align-items: center; margin-bottom: 10px;">
                     <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/deab1a89-d4c0-4ef5-9934-df6a1ad6d44f.png" alt="Posity Online Logo" style="height:50px;margin-right:10px;">
@@ -162,17 +165,23 @@
                     <li>Risk management services</li>
                 </ul>
             </div>
+
+            <!-- Second Footer Item: Company Links -->
             <div class="footer-item-small">
                 <h4>Our Company</h4>
                 <p><a href="https://www.posity.online/about-us">About Us</a></p>
                 <p><a href="https://www.posity.online/contact">Contact</a></p>
             </div>
+
+            <!-- Third Footer Item: Resources -->
             <div class="footer-item-small">
                 <h4>Resources</h4>
                 <p><a href="https://www.posity.online/how-we-help">How we help</a></p>
                 <p><a href="https://www.posity.online/blog">Blog</a></p>
                 <p><a href="https://www.posity.online/how-we-help">Discover more?</a></p>
             </div>
+
+            <!-- Fourth Footer Item: Support Links -->
             <div class="footer-item-small">
                 <h4>Support</h4>
                 <p><a href="https://www.posity.online/accessibility">Accessibility</a></p>
@@ -182,6 +191,8 @@
                 <p><a href="https://www.posity.online/privacy-policy">Privacy Policy</a></p>
             </div>
         </div>
+
+        <!-- Footer Text (ABN, Address) -->
         <div class="footer-text">
             <span>Posity Pty Ltd</span>
             <span style="border-left:1px solid #ffffff;height:20px;"></span>
@@ -189,22 +200,12 @@
             <span style="border-left:1px solid #ffffff;height:20px;"></span>
             <span>PO Box 1114, Bundoora VIC 3083 Australia</span>
         </div>
+
+        <!-- Acknowledgment of Country -->
         <div style="display:flex;align-items:center;justify-content:center;margin-top:20px;text-align:center;">
             <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/7aba8065-4a17-4f81-a620-3c3f16675eec.png" alt="Acknowledgment of Country" style="height:30px;margin-right:10px;">
             <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
         </div>
     </div>
-
-    <script>
-        // Function to send the height to the parent window (Kajabi)
-        function sendHeight() {
-            var height = document.body.scrollHeight;
-            window.parent.postMessage({ type: 'resize', height: height }, '*');
-        }
-
-        // Trigger the function when content loads or is resized
-        window.onload = sendHeight;
-        window.onresize = sendHeight;
-    </script>
 </body>
 </html>
