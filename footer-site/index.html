@@ -10,9 +10,10 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%; /* Ensure body takes up full height */
+            height: auto; /* Allow dynamic height */
             font-family: 'Arial', sans-serif;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
         /* Ensure the footer container takes up full width and background */
@@ -20,7 +21,6 @@
             background-color: #753D80;
             color: white;
             padding: 40px 20px; /* Increased padding for better spacing */
-            margin: 0;
             font-family: 'Arial', sans-serif;
             width: 100%;
             box-sizing: border-box;
@@ -36,22 +36,17 @@
             flex-wrap: wrap;
             gap: 30px; /* Increased gap for better spacing */
             width: 100%;
-            padding: 0;
-            margin: 0;
             box-sizing: border-box;
-            overflow: hidden; /* Ensure no overflow */
+            overflow: hidden;
         }
 
         /* Footer items - each section's content */
         .footer-item, .footer-item-small {
             flex: 1;
-            min-width: 220px; /* Set a minimum width for footer items */
-            padding: 0;
-            margin: 0;
+            min-width: 220px;
             box-sizing: border-box;
         }
 
-        /* Adjust text margins and line spacing */
         h3, h4, h6, p, ul {
             margin: 0;
             padding: 0;
@@ -59,27 +54,11 @@
             line-height: 1.5;
         }
 
-        h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+        h3 { font-size: 24px; margin-bottom: 10px; }
+        h4 { font-size: 18px; margin-bottom: 10px; }
+        h6 { font-size: 14px; margin-bottom: 8px; }
+        p { font-size: 14px; margin-bottom: 8px; }
 
-        h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        h6 {
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        p {
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        /* Adjust links' styles */
         a {
             color: #ffffff;
             text-decoration: none;
@@ -88,14 +67,10 @@
             margin-bottom: 8px;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
+        a:hover { text-decoration: underline; }
 
-        /* Footer text with the ABN and address styling */
         .footer-text {
             font-size: 14px;
-            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -108,52 +83,27 @@
             padding-right: 10px;
         }
 
-        hr {
-            border-top: 1px solid #ffffff;
-            margin: 20px 0;
-        }
+        hr { border-top: 1px solid #ffffff; margin: 20px 0; }
 
-        /* Mobile-specific styles - splitting the content into two columns */
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            .footer-inner {
-                flex-direction: column;  /* Stack items vertically */
-                gap: 20px;
-            }
-
-            .footer-item, .footer-item-small {
-                min-width: 100%;  /* Ensure each item takes full width on smaller screens */
-            }
-
-            .footer-text {
-                font-size: 12px;
-            }
-
-            .footer-item h4 {
-                font-size: 16px;
-            }
+            .footer-inner { flex-direction: column; gap: 20px; }
+            .footer-item, .footer-item-small { min-width: 100%; }
+            .footer-text { font-size: 12px; }
+            .footer-item h4 { font-size: 16px; }
         }
 
-        /* Additional media query for even smaller screens (portrait mobile) */
         @media (max-width: 480px) {
-            .footer-item, .footer-item-small {
-                font-size: 12px;
-            }
-
-            .footer-text {
-                font-size: 10px;
-            }
+            .footer-item, .footer-item-small { font-size: 12px; }
+            .footer-text { font-size: 10px; }
         }
 
-        /* Added padding to left side of the list items for first column */
-        .footer-item ul {
-            padding-left: 20px; /* Increased padding to move bullets away from the edge */
-        }
+        .footer-item ul { padding-left: 20px; }
     </style>
 </head>
 <body>
     <div class="footer-container">
         <div class="footer-inner">
-            <!-- First Footer Item: Posity Online Details -->
             <div class="footer-item">
                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
                     <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/deab1a89-d4c0-4ef5-9934-df6a1ad6d44f.png" alt="Posity Online Logo" style="height:50px;margin-right:15px;">
@@ -171,14 +121,12 @@
                 </ul>
             </div>
 
-            <!-- Second Footer Item: Company Links -->
             <div class="footer-item-small">
                 <h4>Our Company</h4>
                 <p><a href="https://www.posity.online/about-us">About Us</a></p>
                 <p><a href="https://www.posity.online/contact">Contact</a></p>
             </div>
 
-            <!-- Third Footer Item: Resources -->
             <div class="footer-item-small">
                 <h4>Resources</h4>
                 <p><a href="https://www.posity.online/how-we-help">How we help</a></p>
@@ -186,7 +134,6 @@
                 <p><a href="https://www.posity.online/how-we-help">Discover more?</a></p>
             </div>
 
-            <!-- Fourth Footer Item: Support Links -->
             <div class="footer-item-small">
                 <h4>Support</h4>
                 <p><a href="https://www.posity.online/accessibility">Accessibility</a></p>
@@ -197,7 +144,6 @@
             </div>
         </div>
 
-        <!-- Footer Text (ABN, Address) -->
         <div class="footer-text">
             <span>Posity Pty Ltd</span>
             <span style="border-left:1px solid #ffffff;height:20px;"></span>
@@ -206,31 +152,32 @@
             <span>PO Box 1114, Bundoora VIC 3083 Australia</span>
         </div>
 
-        <!-- Acknowledgment of Country -->
         <div style="display:flex;align-items:center;justify-content:center;margin-top:30px;text-align:center;">
             <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/7aba8065-4a17-4f81-a620-3c3f16675eec.png" alt="Acknowledgment of Country" style="height:30px;margin-right:15px;">
             <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
         </div>
     </div>
 
-    <!-- JavaScript to send the iframe height dynamically -->
+    <!-- JavaScript for dynamic iframe resizing -->
     <script>
-        function resizeIframe() {
-            var height = document.documentElement.scrollHeight;  // Get the full height of the document
-            window.parent.postMessage({ type: 'resize', height: height }, '*');  // Send it to the parent iframe
-        }
-
-        // Resize on load and on window resize
-        window.addEventListener('load', resizeIframe);
-        window.addEventListener('resize', resizeIframe);
-
-        function sendHeightToParent() {
-            const height = document.documentElement.scrollHeight;
+        function sendFooterHeight() {
+            const height = document.body.scrollHeight;
             parent.postMessage({ type: 'footerHeight', height: height }, '*');
         }
 
-    window.addEventListener('load', sendHeightToParent);
-    window.addEventListener('resize', sendHeightToParent);
+        function handleResize() {
+            sendFooterHeight();
+            setTimeout(sendFooterHeight, 500);  // Ensures height updates after images/fonts load
+        }
+
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'getFooterHeight') {
+                sendFooterHeight();
+            }
+        });
     </script>
 </body>
 </html>
