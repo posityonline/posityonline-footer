@@ -19,10 +19,12 @@
         .footer-container {
             background-color: #753D80;
             color: white;
-            padding: 40px 20px; /* Increased padding for better spacing */
+            padding: 20px;
             margin: 0;
             font-family: 'Arial', sans-serif;
             width: 100%;
+            max-width: 1200px; /* Set max-width for a small section on large screens */
+            margin: 0 auto; /* Center the footer on the page */
             box-sizing: border-box;
         }
 
@@ -31,8 +33,8 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 30px; /* Increased gap for better spacing */
+            flex-wrap: wrap;  /* Ensure items wrap when space is tight */
+            gap: 20px; /* Adjusted gap for better spacing */
             width: 100%;
             padding: 0;
             margin: 0;
@@ -42,7 +44,7 @@
         /* Footer items - each section's content */
         .footer-item, .footer-item-small {
             flex: 1;
-            min-width: 220px; /* Set a minimum width for footer items */
+            min-width: 220px;  /* Set a minimum width for footer items */
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -57,23 +59,19 @@
         }
 
         h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 22px;
         }
 
         h4 {
             font-size: 18px;
-            margin-bottom: 10px;
         }
 
         h6 {
             font-size: 14px;
-            margin-bottom: 8px;
         }
 
         p {
             font-size: 14px;
-            margin-bottom: 8px;
         }
 
         /* Adjust links' styles */
@@ -81,8 +79,8 @@
             color: #ffffff;
             text-decoration: none;
             font-size: 14px;
-            display: block;
             margin-bottom: 8px;
+            display: inline-block;
         }
 
         a:hover {
@@ -96,8 +94,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            margin-top: 30px;
+            gap: 8px;
         }
 
         .footer-text span {
@@ -146,11 +143,6 @@
                 font-size: 10px;
             }
         }
-
-        /* Added padding to left side of the list items for first column */
-        .footer-item ul {
-            padding-left: 20px; /* Increased padding to move bullets away from the edge */
-        }
     </style>
 </head>
 <body>
@@ -158,8 +150,8 @@
         <div class="footer-inner">
             <!-- First Footer Item: Posity Online Details -->
             <div class="footer-item">
-                <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/deab1a89-d4c0-4ef5-9934-df6a1ad6d44f.png" alt="Posity Online Logo" style="height:50px;margin-right:15px;">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/deab1a89-d4c0-4ef5-9934-df6a1ad6d44f.png" alt="Posity Online Logo" style="height:50px;margin-right:10px;">
                     <h3>Posity Online</h3>
                 </div>
                 <h6>Your trusted partner in:</h6>
@@ -210,22 +202,10 @@
         </div>
 
         <!-- Acknowledgment of Country -->
-        <div style="display:flex;align-items:center;justify-content:center;margin-top:30px;text-align:center;">
-            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/7aba8065-4a17-4f81-a620-3c3f16675eec.png" alt="Acknowledgment of Country" style="height:30px;margin-right:15px;">
+        <div style="display:flex;align-items:center;justify-content:center;margin-top:20px;text-align:center;">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/7aba8065-4a17-4f81-a620-3c3f16675eec.png" alt="Acknowledgment of Country" style="height:30px;margin-right:10px;">
             <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
         </div>
     </div>
-
-    <!-- JavaScript to send the iframe height dynamically -->
-    <script>
-        function resizeIframe() {
-            var height = document.documentElement.scrollHeight;  // Get the full height of the document
-            window.parent.postMessage({ type: 'resize', height: height }, '*');  // Send it to the parent iframe
-        }
-
-        // Resize on load and on window resize
-        window.addEventListener('load', resizeIframe);
-        window.addEventListener('resize', resizeIframe);
-    </script>
 </body>
 </html>
