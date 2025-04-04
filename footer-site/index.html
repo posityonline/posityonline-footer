@@ -215,5 +215,17 @@
             <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
         </div>
     </div>
+
+    <!-- JavaScript to send the iframe height dynamically -->
+    <script>
+        function resizeIframe() {
+            var height = document.documentElement.scrollHeight;  // Get the full height of the document
+            window.parent.postMessage({ type: 'resize', height: height }, '*');  // Send it to the parent iframe
+        }
+
+        // Resize on load and on window resize
+        window.addEventListener('load', resizeIframe);
+        window.addEventListener('resize', resizeIframe);
+    </script>
 </body>
 </html>
