@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posity Online Footer</title>
+    <style>
+        /* Reset body and html to remove margins and paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%; /* Ensure height takes up full available space */
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Ensure the footer container takes up full width and background */
+        .footer-container {
+            background-color: #753D80;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Flex container styling for the footer inner content */
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;  /* Ensure items wrap when space is tight */
+            gap: 30px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Footer items - each section's content */
+        .footer-item, .footer-item-small {
+            flex: 1;
+            min-width: 200px;  /* Adjust this as needed to give enough space */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Adjust text margins and line spacing */
+        h3, h4, h6, p, ul {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        /* Adjust links' styles */
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer text with the ABN and address styling */
+        .footer-text {
+            font-size: 14px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-text span {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        hr {
+            border-top: 1px solid #ffffff;
+            margin: 20px 0;
+        }
+
+        /* Ensure no extra space at the bottom */
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Mobile-specific styles - splitting the content into two columns */
+        @media (max-width: 768px) {
+            .footer-inner {
+                flex-direction: column;  /* Stack items vertically */
+                gap: 20px;
+            }
+
+            .footer-item, .footer-item-small {
+                min-width: 100%;  /* Ensure each item takes full width on smaller screens */
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+
+            .footer-item h4 {
+                font-size: 16px;
+            }
+        }
+
+        /* Additional media query for even smaller screens (portrait mobile) */
+        @media (max-width: 480px) {
+            .footer-item, .footer-item-small {
+                font-size: 12px;
+            }
+
+            .footer-text {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="footer-container">
+        <div class="footer-inner">
+            <div class="footer-item">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/deab1a89-d4c0-4ef5-9934-df6a1ad6d44f.png" alt="Posity Online Logo" style="height:50px;margin-right:10px;">
+                    <h3>Posity Online</h3>
+                </div>
+                <h6>Your trusted partner in:</h6>
+                <ul>
+                    <li>Business launch and optimisation support</li>
+                    <li>Start-up guidance for Allied Health practices</li>
+                    <li>NDIS consulting: registration, audits, policy and Procedures & templates</li>
+                    <li>NDIS Internal audits</li>
+                    <li>ISO training</li>
+                    <li>Online education & training</li>
+                    <li>Risk management services</li>
+                </ul>
+            </div>
+            <div class="footer-item-small">
+                <h4>Our Company</h4>
+                <p><a href="https://www.posity.online/about-us">About Us</a></p>
+                <p><a href="https://www.posity.online/contact">Contact</a></p>
+            </div>
+            <div class="footer-item-small">
+                <h4>Resources</h4>
+                <p><a href="https://www.posity.online/how-we-help">How we help</a></p>
+                <p><a href="https://www.posity.online/blog">Blog</a></p>
+                <p><a href="https://www.posity.online/how-we-help">Discover more?</a></p>
+            </div>
+            <div class="footer-item-small">
+                <h4>Support</h4>
+                <p><a href="https://www.posity.online/accessibility">Accessibility</a></p>
+                <p><a href="https://www.posity.online/faqs">FAQ</a></p>
+                <hr>
+                <p><a href="https://www.posity.online/terms-and-conditions">Terms of Use</a></p>
+                <p><a href="https://www.posity.online/privacy-policy">Privacy Policy</a></p>
+            </div>
+        </div>
+        <div class="footer-text">
+            <span>Posity Pty Ltd</span>
+            <span style="border-left:1px solid #ffffff;height:20px;"></span>
+            <span>ABN 17643461876</span>
+            <span style="border-left:1px solid #ffffff;height:20px;"></span>
+            <span>PO Box 1114, Bundoora VIC 3083 Australia</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;margin-top:20px;text-align:center;">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//sites/2147606020/images/7aba8065-4a17-4f81-a620-3c3f16675eec.png" alt="Acknowledgment of Country" style="height:30px;margin-right:10px;">
+            <p style="margin:0;font-size:14px;color:#ffffff;">Posity Online acknowledges Traditional Owners of Country throughout Australia and pays respect to their cultures and Elders past, present, and emerging.</p>
+        </div>
+    </div>
+</body>
+</html>
